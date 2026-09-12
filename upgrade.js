@@ -1,6 +1,6 @@
 /* Room-first demo, session-only state. All money and progression stay separate. */
 Object.assign(state,{character:'teong',roomTheme:'day',equipped:['rug'],homeChecklist:[],mementos:[],placement:'center',gameRound:0,interaction:'idle',decor:{}});
-const companions={tang:{name:'탕이',label:'남성형 수호 정령',intro:'우리 집, 같이 멋지게 만들어볼까?',detail:'초록 스카프를 두른 지갑 수호자',file:'tang.png'},teong:{name:'텅이',label:'여성형 수호 정령',intro:'여기에 네가 좋아하는 것들을 채워보자!',detail:'작은 꽃을 단 지갑 수호자',file:'teong-female.png'}};
+const companions={tang:{name:'탕이',label:'남성형 수호 정령',intro:'우리 집, 같이 멋지게 만들어볼까?',detail:'초록 스카프를 두른 지갑 수호자',file:'teong.png'},teong:{name:'텅이',label:'여성형 수호 정령',intro:'여기에 네가 좋아하는 것들을 채워보자!',detail:'작은 꽃을 단 지갑 수호자',file:'teong-female.png'}};
 const furniture=[{id:'rug',name:'웰컴 러그',cell:2,require:'처음부터 함께하는 선물',free:true,spot:'rug'},{id:'desk',name:'기록 책상',cell:0,require:'소비 1건 직접 기록',reward:'desk',spot:'desk'},{id:'bus',name:'초록 버스 선반',cell:1,require:'교통비 비교 1회 완료',reward:'bus',spot:'bus'},{id:'board',name:'우리 집 작전 보드',cell:3,require:'주거 조건 점검 완료',reward:'board',spot:'board'},{id:'plant',name:'잘 자라는 화분',cell:4,require:'첫 고정비 진단 완료',reward:'flag',spot:'plant'},{id:'lamp',name:'포근한 스탠드',cell:5,require:'첫 주간 점검 완료',reward:'rug',spot:'lamp'}];
 const original={render,saveProfile,saveRecord,finishCompare,finishReview,armor:baseArmorView,recordModal,policyModal};
 function who(){return companions[state.character]}
